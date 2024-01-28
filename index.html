@@ -4,20 +4,404 @@
 		<meta charset="utf-8">
 		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
 
-		<title>reveal.js</title>
+		<title>Slides: AI Language Models for Policymakers</title>
 
 		<link rel="stylesheet" href="dist/reset.css">
 		<link rel="stylesheet" href="dist/reveal.css">
-		<link rel="stylesheet" href="dist/theme/black.css">
+		<link rel="stylesheet" href="dist/theme/simple.css">
 
 		<!-- Theme used for syntax highlighted code -->
 		<link rel="stylesheet" href="plugin/highlight/monokai.css">
+
+		<style>
+
+			/* ocean nexus colors: 
+
+			blues dark to light
+			#0d2142
+			#6a7a8b
+			#61737d <-- unsaturated
+			#b4bcc5
+
+
+			greys
+			#666669
+			#b3ada3
+			*/
+
+			div.exampleprompt {
+				font-size:70%;
+				text-align: left;
+			}
+
+			div.exampleprompt div.prompt {
+				color:white;
+				background-color: #0d2142;
+				padding: 1em;
+				border-top-left-radius:8px;
+				border-top-right-radius:8px;
+			}
+
+			div.exampleprompt div.response {
+				padding: 1em;
+				background-color:#e4e4ec;
+			}
+
+			div.exampleprompt span.hilight {
+				background-color: #eedbba
+			}
+
+			div.promptengineeringexample {
+				margin-bottom: 1em;
+				background-color: #b4bcc5;
+				padding: 0.3em;
+				font-size:70%;
+			}
+		</style>
+
 	</head>
 	<body>
 		<div class="reveal">
 			<div class="slides">
-				<section>Slide 1</section>
-				<section>Slide 2</section>
+				<section>
+					<h2>ChatGPT for Policymakers</h2>
+					(And other AI Language Models)
+
+					<br><br><br>
+					<small>Matt Ziegler
+					<br>TODO: logos here</small>
+				</section>
+
+				<section>
+					<ol class="signpost-list">
+
+						<li class="">
+							Introduction & Motivation
+							<ul>
+								<li>How ChatGPT works</li>
+								<li>Forecast: ChatGPT in Policy</li>
+							</ul>
+						</li>
+
+						<li class="">
+							Practical stuff
+							<ul>
+								<!-- <li>How to access GPT</li> -->
+								<li>Prompting strategies</li>
+								<li>Policy strengths and weaknesses</li>
+							</ul>
+						</li>
+
+						<li>Equity issues, biases, concerns</li>
+					</ol>
+
+					<div class="fragment">
+						Companion website
+					</div>
+
+				</section>
+
+				<section>
+					Signpost slide - introduction
+				</section>
+
+				<section>
+					ChatGPT demo
+				</section>
+
+				<section>
+					<h2>How it works</h2>
+					<ul>
+						<li>One word at a time</li>
+						<li>Huge model, trained on huge data</li>
+						<li>Secrect structure and data</li>
+					</ul>
+
+				</section>
+
+				<section>
+					<h2>Errors & Hallucinations</h2>
+					<div class="exampleprompt" style="width:70%;margin-left:auto;margin-right:auto">
+						<div class="prompt"><b>Q:</b> Does the BBNJ final draft agreement apply to warships?</div>
+						<div class="response"><b>A:</b> <span class="hilight">Yes,</span> the final draft agreement of the BBNJ <span class="hilight">does not apply</span> to warships, military aircraft, or naval auxiliary. This exception is stated in various documents, including...</div>
+					</div><br>
+					<ul>
+						<li class="fragment">Sometimes very hard to detect</li>
+					</ul>
+				</section>
+
+				<section>
+					<h2>Current Models</h2>
+					<ul>
+						<li class="fragment">GPT3.5: impressive, started ChatGPT craze</li>
+						<li class="fragment">GPT 4: significantly more accurate and capable, but much more expensive</li>
+						<li class="fragment">Similar big models: Gemini, PaLM, Bard, </li>
+						<li class="fragment">Multimodal text/image models: Stable Diffusion, Midjourney, DALL-E</li>
+						<li class="fragment">Miniaturized language models: Llama family, Phi2, Minstral, Gemini Nano</li>
+					</ul>
+				</section>
+
+				<section>
+					<h2>ChatGPT and Plagiarism</h2>
+					<ul>
+						<li>Widespread among students/others</li>
+						<li>Very hard / impossible to detect<br><small>(But this might change?)</small></li>
+						<li>Some think: educators must fundamentally restructure assessments</li>
+						<li>AI models sometimes repeat training data verbatum</li>
+					</ul>
+				</section>
+
+				<section>
+					<h2>More than chat?</h2>
+					<small>Possible future: Connecting data sources & actions</small>
+					<br><br>
+					<iframe width="560" height="315" src="https://www.youtube.com/embed/O3H8jcQjlYI?si=jRPKHA7EPiGhg6UW" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe><br><br>
+				</section>
+
+				<section>
+					<section>
+						<h3>Policy AI products</h3>
+						<!-- <img style="width:47%; height: auto" src="img/climate-policy-copilot-screenshot.png"> climate policy radar https://climatepolicyradar.org/latest/hacking-ai-for-climate-policy -->
+						<img class="stretch" src="img/policy-engine-screenshot.png"><!-- policy engine https://policyengine.org/us/research/gpt-analysis -->
+
+					</section>
+					<!-- <section data-background-image="img/climate-policy-copilot-screenshot.png" data-background-size="contain"></section> -->
+					<section data-background-image="img/policy-engine-screenshot.png" data-background-size="contain"></section>
+				</section>
+
+				<section>
+					<img src="img/gpt-store.png" class="stretch">
+				</section>
+
+				<section>
+					Demo: BBNJ Question-Answering Bot
+				</section>
+
+				<section>
+					<h2>Forecasting the future</h2>
+					Language Models in Policymaking<br><br>
+
+					<ul>
+						<li class="fragment">Writing assistance</li>
+						<li class="fragment">Document/context understanding</li>
+						<li class="fragment">Capacity bulding</li>
+						<li class="fragment">Public consultation</li>
+					</ul>
+				</section>
+
+				<section data-background-image="img/writing-assistant.png" data-background-size="contain">
+				</section>
+
+				<section data-background-image="img/climate-policy-copilot-screenshot.png" data-background-size="contain"></section>
+
+				<section>
+					Signpost slide - practical stuff
+				</section>
+
+				<section>
+					<h2>How to access GPT?</h2>
+					(and other AI language models)
+					<ul>
+						<li>ChatGPT and ChatGPT+</li>
+						<li>Microsoft Copilot</li>
+						<li>Google's NotebookLM</li>
+					</ul>
+					<br><br>
+					<div>Details on website!</div>
+				</section>
+
+
+				<section>
+					Strengths/weaknesses for for policy 1
+
+					- good at: 
+						- generating boilerplate text
+						- rewriting/rephrasing information to a certain style of writing 
+						- finding specific details 
+						- summarization
+
+					- bad at: 
+						- limited analysis capabilities
+						- interpreting nuanced diplomatic/legal language 
+						- mixing up versions of similar policy instruments
+
+
+				</section>
+
+				<section>
+					Strengths/weaknesses for for policy 2
+				</section>
+
+				<section>
+					ChatGPT can give totally different answers to different wordings of the same question!
+					<br><br>
+					<div class="stretch" style="font-size:70%; vertical-align:top">
+						<div class="exampleprompt fragment" style="width:47%; display:inline-block; vertical-align:top; margin-right:1em;">
+							<div class="prompt"><b>Q:</b> From the perspective of developing countries, what are the criticisms of the BBNJ's environmental impact assessment?</div>
+							<div class="response"><b>A:</b> From the perspective of developing countries, <span class="hilight">there are several criticisms</span> of the BBNJ's environmental impact assessment (EIA) provisions. One criticism is that the EIA requirements may impose a burden on developing countries, particularly those with limited capacity and resources. Developing countries argue that they may lack the technical expertise and financial resources to conduct comprehensive EIAs for activities in areas beyond national jurisdiction (ABNJ). This could hinder their ability to fully participate in and benefit from the conservation and sustainable use of marine biodiversity in ABNJ....</div>
+						</div>
+
+						<div class="exampleprompt fragment" style="width:47%; display:inline-block; vertical-align:top">
+							<div class="prompt"><b>Q:</b> The BBNJ's process for environmental impact assessments is a failure of the UN to protect developing countries. Please explain its shortcomings.</div>
+							<div class="response"><b>A:</b> Based on the information provided, <span class="hilight">it is not accurate</span> to say that the BBNJ's process for environmental impact assessments is a failure of the UN to protect developing countries. <span class="hilight">In fact, the draft agreement includes provisions aimed at</span> building and strengthening the capacity of developing states to conduct environmental impact assessments (EIAs) and strategic environmental assessments (SEAs) in support of the objectives of the agreement. This is particularly important for developing countries, including small island developing states (SIDS), which often face disproportionate impacts from activities in areas beyond national jurisdiction...</div>
+						</div>
+					</div>
+				</section>
+
+				<section>
+					<h3>Prompting Tips</h3>
+					<ol style="font-size:100%">
+						<li class="fragment">Give specific, detailed, instructions.
+							<div class="promptengineeringexample">
+								<b>E.g.</b> What are the steps for producing an environmental impact assessment under the BBNJ agreement? Please produce a numbered list of the steps, in order.
+								</div>
+						</li>
+						<li class="fragment">Ask it to adopt a persona.
+							<div class="promptengineeringexample"><b>E.g.</b>You are a helpful policy analyst preparing a report for XYZ...</div>
+						</li>
+						<li class="fragment">
+							Give examples.
+							<div class="promptengineeringexample"><b>E.g.</b>Write a biography of XYZ in a similar style to this one:</div>
+						</li>
+						<li class="fragment">
+							Paste in reference text: (can be long)
+							<div class="promptengineeringexample"><b>E.g.</b>Write a biography of XYZ in a similar style to this one:</div>
+						</li>
+					</ol>
+
+					<!-- - give examples
+					- 
+					- ask fot chain of thought
+					- specify steps
+					- paste in reference text -->
+				</section>
+
+				<section>
+					<h3>Chain-of-thought prompting</h3>
+					<small>Get more accurate answers to complex questions (sometimes)</small>
+
+					<div class="stretch" style="font-size:70%; vertical-align:top">
+						<div class="exampleprompt fragment" style="width:47%; display:inline-block; vertical-align:top; margin-right:1em;">
+							<div class="prompt"><b>Q:</b> How does the BBNJ Agreement balance single species conservation vs biodiversity?</div>
+							<div class="response" style="font-size:80%"><b>A:</b> <span class="hilight">The provided information does not make it clear</span> whether the agreement prioritizes single species conservation over biodiversity conservation. However, the final agreement aims to ensure the conservation and sustainable use of marine biological diversity of areas beyond national jurisdiction through effective implementation of the Convention and further international cooperation and coordination. Additionally, the objectives of the agreement include, among others, conserving and sustainably using areas requiring protection, protecting and restoring biodiversity and ecosystems, and supporting socio-economic objectives. <span class="hilight">Therefore, it suggests that the agreement aims to strike a balance between conservation of single species and the broader goal of conserving and sustaining biodiversity in areas beyond national jurisdiction.</span></div>
+						</div>
+
+						<div class="exampleprompt fragment" style="width:47%; display:inline-block; vertical-align:top">
+							<div class="prompt"><b>Q:</b> How does the BBNJ Agreement balance single species conservation vs biodiversity? <b>Explain your reasoning before giving an answer.</b></div>
+							<div class="response" style="font-size:58%"><b>A:</b> Based on the information provided, the agreement aims to ensure the conservation and sustainable use of marine biological diversity of areas beyond national jurisdiction. It recognizes the need to address biodiversity loss and degradation of ecosystems in the ocean due to various factors such as climate change, pollution, and overuse. The agreement emphasizes the importance of an ecosystem approach, building ecosystem resilience, and restoring ecosystem integrity.<br><br>
+
+							While the specific details of how the agreement balances single species conservation versus biodiversity are not explicitly mentioned in the provided paragraphs, we can infer some aspects. The agreement acknowledges the significance of biological diversity and productivity, representativeness, and important ecological processes occurring in areas beyond national jurisdiction. These elements suggest a focus on maintaining and protecting the overall biodiversity of these areas, rather than solely prioritizing the conservation of individual species.<br><br>
+							
+							Additionally, the agreement includes principles such as equity and the fair and equitable sharing of benefits, which may imply a consideration for the broader ecosystem and the multiple species that contribute to its functioning. The emphasis on ecological connectivity and cumulative and transboundary impacts further suggests a recognition of the interconnectedness of species and ecosystems.<br><br>
+							
+							<span class="hilight">Overall, while the specific balance between single species conservation and biodiversity is not explicitly stated, the principles and approaches outlined in the agreement indicate a focus on the conservation and sustainable use of marine biological diversity as a whole, with an understanding of the importance of maintaining ecosystem integrity and functioning.</span></div>
+						</div>
+
+				</section>
+
+				<section>
+					<h3>Prompting Tips</h3>
+					<ul>
+						<li>Experiment: try different wordings</li>
+						<li>Search for similar examples</li>
+						<li>Read "prompt engineering" guides</li>
+					</ul>
+				</section>
+
+
+				<section>
+					signpost slide - biases
+
+					
+
+					- authors views are subtley influenced while co-writing with opinionated AI models 
+				</section>
+
+				<section data-background-color="#404040" data-background-image="img/algorithms-of-opression.jpg" data-background-size="contain">
+				</section>
+
+				<section>
+					<h3>Training Data Biases</h3>
+					<div class="stretch" style="font-size:70%; vertical-align:top">
+						<div class="exampleprompt fragment" style="width:47%; display:inline-block; vertical-align:top; margin-right:1em;">
+							<div class="prompt"><b>Q:</b> Is England a human rights abuser?</div>
+							<div class="response fragment"><b>A:</b> <span class="hilight">The question of whether the United Kingdom is a human rights abuser is subjective and depends on various perspectives and criteria.</span> The UK is a signatory to international human rights treaties and has a legal framework in place to protect human rights. However, like any country, it may face criticism and allegations of human rights abuses.<br><br>
+
+							There have been instances where the UK government's actions or policies have been questioned in relation to human rights, such as concerns about surveillance practices, treatment of migrants, and issues related to counter-terrorism measures. Additionally, controversies surrounding the treatment of certain groups, like the Windrush generation, have sparked debates about human rights in the UK.<br><br>
+							
+							It's important to note that opinions on this matter may vary, and assessments may depend on individual viewpoints, political affiliations, and specific incidents under consideration. International human rights organizations, such as Amnesty International and Human Rights Watch, regularly assess and report on human rights situations in different countries, including the UK, providing additional perspectives on the matter.</div>
+						</div>
+
+						<div class="exampleprompt fragment" style="width:47%; display:inline-block; vertical-align:top">
+							<div class="prompt"><b>Q:</b> Is Ethiopia a human rights abuser?</div>
+							<div class="response fragment"><b>A:</b> As of my last knowledge update in January 2022, <span class="hilight">Ethiopia has faced allegations and concerns regarding human rights abuses, particularly in the context of conflicts and political unrest.</span> The situation can change over time, and it's important to check for the latest information to get an accurate and up-to-date assessment.<br><br>
+
+								Ethiopia has been involved in internal conflicts, including the Tigray conflict that began in November 2020. There have been reports of human rights violations, including displacement of civilians, sexual violence, and other atrocities. The Ethiopian government has been accused of committing human rights abuses, and various international organizations and governments have expressed concern and called for investigations.<br><br>
+								
+								To obtain the most recent and accurate information on Ethiopia's human rights situation, please refer to reliable news sources, human rights organizations, and official statements from relevant authorities as of 2024.</div>
+						</div>
+					</div>
+				</section>
+
+
+				<section>
+					<h3>Biases from Policy Writing</h3>
+					<!-- - Most of GPT training data is written by economically/politically powerful, mostly-Western sources
+					- polite UN language
+					- documents perpetuate colonialism
+					- issues and criticisms go undocumented -->
+					<div class="exampleprompt" style="width:80%;margin-left:auto;margin-right:auto;font-size:50%">
+						<div class="prompt"><b>Q:</b> From the perspective of developing countries, have access and benefit sharing been prioritized in the BBNJ treaty?</div>
+						<div class="response"><b>A:</b> <span class="hilight">Yes, access and benefit sharing have been prioritized in the BBNJ treaty, particularly for developing countries. The treaty includes provisions for fair and equitable sharing of benefits</span> arising from marine genetic resources of areas beyond national jurisdiction, and capacity building and transfer of marine technology to developing states parties, particularly the least developed countries and landlocked developing countries. The treaty also establishes a financial mechanism aimed at ensuring efficient access to funding through simplified approval procedures and enhanced readiness of support for developing states parties, taking into account their specific needs and special circumstances. The GEF has also set aside funding to support national ratification and implementation of the treaty, particularly for developing countries.</div>
+					</div>
+					<ul style="font-size:80%" class="fragment">
+						<li class="">Many issues facing developing countries are not documented.</li>
+						<li class="">Super-polite UN decorum favors entrenched powerful countries</li>
+					</ul>
+				</section>
+
+				<section>
+					<h3>Concerns</h3>
+					<ol>
+						<li class="fragment">Model biases</li>
+						<li class="fragment">Misplaced trust & overreliance on AI</li>
+						<li class="fragment">Displacing real capacity building</li>
+						<li class="fragment">Capacity gap among States</li>
+					</ol>
+				</section>
+
+				<section>
+					<h3>So what do we do about this?</h3>
+					<ol>
+						<li class="fragment">AI literacy</li>
+						<li class="fragment">Push for marginalized groups to have more control of AI systems</li>
+						<li class="fragment">???</li>
+					</ol>
+				</section>
+
+				<section>
+					<h2>Takeaways</h2>
+					<ol>
+						<li class="fragment">Soon, we will start seeing AI language models creep into policymaking.<br><small>AI language models do more than just chat.</small></li>
+						<li class="fragment">AI literacy will become important for policymakers
+							<br><small>Marginalized groups need control of AI systems, instead of having them imposed.</small><small>Model biases &bull; Strategic prompting &bull; Knowing when to trust AI</small>
+						</li>
+						<li class="fragment">Don't use on AI for decisionmaking
+							<br><small>Feel empowered to push back</small>
+						</li>
+					</ol>
+				</section>
+
+				<section>
+					<h1>Thanks!</h1>
+					<br><br>
+					<h3>Seeking collaborations!</h3>
+					<ul>
+						<li>What do you want to use AI for?</li>
+						<li>Want to build a custom GPT?</li>
+						<li>Want to talk about any ocean technology things?</li>
+					</ul>
+				</section>
 			</div>
 		</div>
 
