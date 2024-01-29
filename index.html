@@ -34,6 +34,28 @@
 				text-align: left;
 			}
 
+			ol.signpost-list {
+				font-size:90%;
+			}
+
+			li.signpost-chunk {
+				border: solid 0px white;
+				background-color: #e3e8ee;
+				border-radius: 10px;
+				padding: 0.5em;
+				margin-bottom: 0.5em;
+				margin-top: 0.3em;
+			}
+
+			li.signpost-chunk.fragment.current-fragment {
+				color: white;
+				background-color: #0d2142;
+			}
+
+			li.signpost-chunk.fragment.visible::marker {
+				color:black;
+			}
+
 			div.exampleprompt div.prompt {
 				color:white;
 				background-color: #0d2142;
@@ -57,13 +79,21 @@
 				padding: 0.3em;
 				font-size:70%;
 			}
+
+			span.blue {
+				color: #0f4192;
+			}
+
+			ul.spaced li {
+				margin-top: 0.5em;
+			}
 		</style>
 
 	</head>
 	<body>
 		<div class="reveal">
 			<div class="slides">
-				<section>
+				<section data-background-color="#0d2142">
 					<h2>ChatGPT for Policymakers</h2>
 					(And other AI Language Models)
 
@@ -74,39 +104,32 @@
 
 				<section>
 					<ol class="signpost-list">
-
-						<li class="">
+						<li class="signpost-chunk fragment custom" data-fragment-index="2">
 							Introduction & Motivation
 							<ul>
 								<li>How ChatGPT works</li>
-								<li>Forecast: ChatGPT in Policy</li>
+								<li>Future of ChatGPT in Policy</li>
 							</ul>
 						</li>
-
-						<li class="">
+						<li class="signpost-chunk">
 							Practical stuff
 							<ul>
 								<!-- <li>How to access GPT</li> -->
+								<li>Strengths and weaknesses for policy</li>
 								<li>Prompting strategies</li>
-								<li>Policy strengths and weaknesses</li>
 							</ul>
 						</li>
-
-						<li>Equity issues, biases, concerns</li>
+						<li class="signpost-chunk">Equity issues, biases, concerns</li>
 					</ol>
-
-					<div class="fragment">
-						Companion website
+					<div class="fragment fade-in-then-out" data-fragment-index="1" style="color:white;background-color:#0d2142;display:inline-block;margin-left:auto;margin-right:auto;padding: 0.3em 2em; border-radius:10px;">
+						Companion website!
 					</div>
-
 				</section>
 
-				<section>
-					Signpost slide - introduction
-				</section>
 
-				<section>
-					ChatGPT demo
+				<section data-background-color="#0d2142">
+					<h1>Demo</h1>
+					ChatGPT
 				</section>
 
 				<section>
@@ -131,23 +154,24 @@
 				</section>
 
 				<section>
-					<h2>Current Models</h2>
+					<h2>Current Popular Models</h2>
 					<ul>
-						<li class="fragment">GPT3.5: impressive, started ChatGPT craze</li>
-						<li class="fragment">GPT 4: significantly more accurate and capable, but much more expensive</li>
-						<li class="fragment">Similar big models: Gemini, PaLM, Bard, </li>
-						<li class="fragment">Multimodal text/image models: Stable Diffusion, Midjourney, DALL-E</li>
-						<li class="fragment">Miniaturized language models: Llama family, Phi2, Minstral, Gemini Nano</li>
+						<li class="fragment"><span class="blue">GPT 3.5</span>: impressive, started ChatGPT craze</li>
+						<li class="fragment"><span class="blue">GPT 4</span>: significantly more accurate and capable, but much more expensive</li>
+						<li class="fragment">Similar big models: <span class="blue">Gemini, PaLM, Bard</span></li>
+						<li class="fragment">Multimodal text/image models: <span class="blue">Stable Diffusion, Midjourney, DALL-E</span></li>
+						<li class="fragment">Miniaturized language models: <span class="blue">Llama family, Phi2, Minstral, Gemini Nano</span></li>
 					</ul>
 				</section>
 
-				<section>
+				<section data-background-color="#0d2142">
 					<h2>ChatGPT and Plagiarism</h2>
-					<ul>
-						<li>Widespread among students/others</li>
-						<li>Very hard / impossible to detect<br><small>(But this might change?)</small></li>
-						<li>Some think: educators must fundamentally restructure assessments</li>
-						<li>AI models sometimes repeat training data verbatum</li>
+					<ul class="spaced">
+						<li class="fragment">Widespread cheating among students/others</li>
+						<li class="fragment">Very hard / impossible to detect AI-written text<br><small>(But this might change?)</small></li>
+						<li class="fragment">Some think: educators must fundamentally restructure assessments</li>
+						<li class="fragment">AI models sometimes repeat training data verbatum</li>
+						<li class="fragment">Copyright lawsuits looming</li>
 					</ul>
 				</section>
 
@@ -166,36 +190,77 @@
 
 					</section>
 					<!-- <section data-background-image="img/climate-policy-copilot-screenshot.png" data-background-size="contain"></section> -->
-					<section data-background-image="img/policy-engine-screenshot.png" data-background-size="contain"></section>
+					<!-- <section data-background-image="img/policy-engine-screenshot.png" data-background-size="contain"></section> -->
 				</section>
 
 				<section>
 					<img src="img/gpt-store.png" class="stretch">
 				</section>
 
-				<section>
-					Demo: BBNJ Question-Answering Bot
+				<section data-background-color="#0d2142">
+					<h1>Demo</h1>BBNJ Question-Answering Bot
 				</section>
 
 				<section>
-					<h2>Forecasting the future</h2>
-					Language Models in Policymaking<br><br>
+					<section>
+						<h2>Forecasting the future</h2>
+						Language Models in Policymaking<br><br>
+						<ul>
+							<li class="fragment">Writing assistance</li>
+							<!-- <li class="fragment">Understanding legal & policy documents</li>
+							<li class="fragment">Capacity building</li>
+							<li class="fragment">Public consultation</li> -->
+						</ul>
+					</section>
+					<section data-background-image="img/writing-assistant.png" data-background-size="contain">
+					</section>
 
-					<ul>
-						<li class="fragment">Writing assistance</li>
-						<li class="fragment">Document/context understanding</li>
-						<li class="fragment">Capacity bulding</li>
-						<li class="fragment">Public consultation</li>
-					</ul>
+					<section>
+						<h2>Forecasting the future</h2>
+						Language Models in Policymaking<br><br>
+						<ul>
+							<li class="">Writing assistance</li>
+							<li class="">Document/context understanding</li>
+						</ul>
+					</section>
+
+					<section data-background-image="img/climate-policy-copilot-screenshot.png" data-background-size="contain"></section>
+
+					<section>
+						<h2>Forecasting the future</h2>
+						Language Models in Policymaking<br><br>
+						<ul>
+							<li class="">Writing assistance</li>
+							<li class="">Understanding legal & policy documents</li>
+							<li class="">Capacity building</li>
+							<li class="fragment">Public consultation</li>
+						</ul>
+					</section>
+
 				</section>
 
-				<section data-background-image="img/writing-assistant.png" data-background-size="contain">
-				</section>
+				
 
-				<section data-background-image="img/climate-policy-copilot-screenshot.png" data-background-size="contain"></section>
-
+				
 				<section>
-					Signpost slide - practical stuff
+					<ol class="signpost-list">
+						<li class="signpost-chunk fragment custom" data-fragment-index="0">
+							Introduction & Motivation
+							<ul>
+								<li>How ChatGPT works</li>
+								<li>Future of ChatGPT in Policy</li>
+							</ul>
+						</li>
+						<li class="signpost-chunk fragment custom" data-fragment-index="1">
+							Practical stuff
+							<ul>
+								<!-- <li>How to access GPT</li> -->
+								<li>Strengths and weaknesses for policy</li>
+								<li>Prompting strategies</li>
+							</ul>
+						</li>
+						<li class="signpost-chunk">Equity issues, biases, concerns</li>
+					</ol>
 				</section>
 
 				<section>
@@ -207,13 +272,36 @@
 						<li>Google's NotebookLM</li>
 					</ul>
 					<br><br>
-					<div>Details on website!</div>
+					<div style="color:white;background-color:#0d2142;display:inline-block;margin-left:auto;margin-right:auto;padding: 0.3em 2em; border-radius:10px;">Details on website!</div>
 				</section>
 
 
-				<section>
-					Strengths/weaknesses for for policy 1
+				<section data-background-color="#0d2142">
+					<h3>GPT for Policy Work</h3>
 
+					<div class="stretch">
+						<div style="width:47%; display:inline-block; vertical-align:top; margin-right:1em;">
+							<h5>Strengths</h5>
+							<ul style="font-size:80%" class="spaced">
+								<li class="fragment">Rewriting/rephrasing information to match certain styles, like more formal</li>
+								<li class="fragment">Generating boilerplate text</li>
+								<li class="fragment">Answering questions about specific details</li>
+								<li class="fragment">Explaining topics for varying levels of expertise</li>
+								<li class="fragment">Summarization</li>
+							</ul>
+						</div>
+						<div style="width:47%; display:inline-block; vertical-align:top;">
+							<h5>Weaknesses</h5>
+							<ul style="font-size:80%" class="spaced">
+								<li class="fragment">Limited analysis capabilities</li>
+								<li class="fragment">Only knows what's documented: missing context</li>
+								<li class="fragment">Difficulty interpreting nuanced diplomatic language</li>
+								<li class="fragment">Confusing legal/common language</li>
+								<li class="fragment">Mixing up sources</li>
+							</ul>
+						</div>
+					</div>
+<!-- 
 					- good at: 
 						- generating boilerplate text
 						- rewriting/rephrasing information to a certain style of writing 
@@ -223,13 +311,9 @@
 					- bad at: 
 						- limited analysis capabilities
 						- interpreting nuanced diplomatic/legal language 
-						- mixing up versions of similar policy instruments
+						- mixing up versions of similar policy instruments -->
 
 
-				</section>
-
-				<section>
-					Strengths/weaknesses for for policy 2
 				</section>
 
 				<section>
@@ -299,7 +383,7 @@
 
 				</section>
 
-				<section>
+				<section data-background-color="#0d2142">
 					<h3>Prompting Tips</h3>
 					<ul>
 						<li>Experiment: try different wordings</li>
@@ -310,18 +394,31 @@
 
 
 				<section>
-					signpost slide - biases
-
-					
-
-					- authors views are subtley influenced while co-writing with opinionated AI models 
+					<ol class="signpost-list">
+						<li class="signpost-chunk">
+							Introduction & Motivation
+							<ul>
+								<li>How ChatGPT works</li>
+								<li>Future of ChatGPT in Policy</li>
+							</ul>
+						</li>
+						<li class="signpost-chunk fragment custom" data-fragment-index="0">
+							Practical stuff
+							<ul>
+								<!-- <li>How to access GPT</li> -->
+								<li>Strengths and weaknesses for policy</li>
+								<li>Prompting strategies</li>
+							</ul>
+						</li>
+						<li class="signpost-chunk fragment custom" data-fragment-index="1">Equity issues, biases, concerns</li>
+					</ol>
 				</section>
 
 				<section data-background-color="#404040" data-background-image="img/algorithms-of-opression.jpg" data-background-size="contain">
 				</section>
 
 				<section>
-					<h3>Training Data Biases</h3>
+					<h3>Model Biases</h3>
 					<div class="stretch" style="font-size:70%; vertical-align:top">
 						<div class="exampleprompt fragment" style="width:47%; display:inline-block; vertical-align:top; margin-right:1em;">
 							<div class="prompt"><b>Q:</b> Is England a human rights abuser?</div>
@@ -360,17 +457,18 @@
 					</ul>
 				</section>
 
-				<section>
+				<section data-background-color="#0d2142">
 					<h3>Concerns</h3>
-					<ol>
+					<ol class="spaced">
 						<li class="fragment">Model biases</li>
 						<li class="fragment">Misplaced trust & overreliance on AI</li>
+						<li class="fragment">Hidden influence of opinionated models</li>
 						<li class="fragment">Displacing real capacity building</li>
 						<li class="fragment">Capacity gap among States</li>
 					</ol>
 				</section>
 
-				<section>
+				<section data-background-color="#0d2142">
 					<h3>So what do we do about this?</h3>
 					<ol>
 						<li class="fragment">AI literacy</li>
@@ -392,7 +490,7 @@
 					</ol>
 				</section>
 
-				<section>
+				<section data-background-color="#0d2142">
 					<h1>Thanks!</h1>
 					<br><br>
 					<h3>Seeking collaborations!</h3>
