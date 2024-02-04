@@ -47,12 +47,12 @@
 				margin-top: 0.3em;
 			}
 
-			li.signpost-chunk.fragment.current-fragment {
+			li.signpost-chunk.fragment.current-fragment, li.signpost-chunk.active {
 				color: white;
 				background-color: #0d2142;
 			}
 
-			li.signpost-chunk.fragment.visible::marker {
+			li.signpost-chunk.fragment.visible::marker, li.signpost-chunk.active::marker {
 				color:black;
 			}
 
@@ -84,7 +84,7 @@
 				color: #0f4192;
 			}
 
-			ul.spaced li {
+			ul.spaced li, ol.spaced li {
 				margin-top: 0.5em;
 			}
 		</style>
@@ -107,19 +107,19 @@
 						<li class="signpost-chunk fragment custom" data-fragment-index="2">
 							Introduction & Motivation
 							<ul>
+								<li>Future of ChatGPT in Policy?</li>
 								<li>How ChatGPT works</li>
-								<li>Future of ChatGPT in Policy</li>
 							</ul>
 						</li>
+						<li class="signpost-chunk">Equity issues, biases, concerns</li>
 						<li class="signpost-chunk">
 							Practical stuff
 							<ul>
-								<!-- <li>How to access GPT</li> -->
+								<li>Ways to access GPT</li>
 								<li>Strengths and weaknesses for policy</li>
 								<li>Prompting strategies</li>
 							</ul>
 						</li>
-						<li class="signpost-chunk">Equity issues, biases, concerns</li>
 					</ol>
 					<div class="fragment fade-in-then-out" data-fragment-index="1" style="color:white;background-color:#0d2142;display:inline-block;margin-left:auto;margin-right:auto;padding: 0.3em 2em; border-radius:10px;">
 						Companion website!
@@ -132,14 +132,54 @@
 					ChatGPT
 				</section>
 
-				<section>
-					<h2>How it works</h2>
-					<ul>
-						<li>One word at a time</li>
-						<li>Huge model, trained on huge data</li>
-						<li>Secrect structure and data</li>
-					</ul>
 
+				<section>
+					<h2>More than chat?</h2>
+					<small>Possible future: Connecting data sources & actions</small>
+					<br><br>
+					<iframe width="560" height="315" src="https://www.youtube.com/embed/O3H8jcQjlYI?si=jRPKHA7EPiGhg6UW" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe><br><br>
+				</section>
+
+				<section>
+					<section>
+						<h3>Policy AI products</h3>
+						<!-- <img style="width:47%; height: auto" src="img/climate-policy-copilot-screenshot.png"> climate policy radar https://climatepolicyradar.org/latest/hacking-ai-for-climate-policy -->
+						<img class="stretch" src="img/policy-engine-screenshot.png"><!-- policy engine https://policyengine.org/us/research/gpt-analysis -->
+
+					</section>
+					<!-- <section data-background-image="img/climate-policy-copilot-screenshot.png" data-background-size="contain"></section> -->
+					<!-- <section data-background-image="img/policy-engine-screenshot.png" data-background-size="contain"></section> -->
+				</section>
+
+				<section>
+					<img src="img/gpt-store.png" class="stretch">
+				</section>
+
+				<section data-background-color="#0d2142">
+					<h1>Demo</h1>BBNJ Question-Answering Bot
+				</section>
+
+
+
+				<section>
+					<section>
+						<h2>How it works</h2>
+						<ul>
+							<li>One word at a time</li>
+							<li>Enormous model, trained on enormous data</li>
+							<li>Secrect structure and data</li>
+						</ul>
+					</section>
+
+					<section>
+						<h3>One word at a time</h3>
+						<img class="stretch" src="img/probabalistic-generation.png">
+					</section>
+
+					<section>
+						<h2>No planning</h2>
+						<img class="stretch" src="img/no-planning.png">
+					</section>
 				</section>
 
 				<section>
@@ -175,31 +215,7 @@
 					</ul>
 				</section>
 
-				<section>
-					<h2>More than chat?</h2>
-					<small>Possible future: Connecting data sources & actions</small>
-					<br><br>
-					<iframe width="560" height="315" src="https://www.youtube.com/embed/O3H8jcQjlYI?si=jRPKHA7EPiGhg6UW" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe><br><br>
-				</section>
-
-				<section>
-					<section>
-						<h3>Policy AI products</h3>
-						<!-- <img style="width:47%; height: auto" src="img/climate-policy-copilot-screenshot.png"> climate policy radar https://climatepolicyradar.org/latest/hacking-ai-for-climate-policy -->
-						<img class="stretch" src="img/policy-engine-screenshot.png"><!-- policy engine https://policyengine.org/us/research/gpt-analysis -->
-
-					</section>
-					<!-- <section data-background-image="img/climate-policy-copilot-screenshot.png" data-background-size="contain"></section> -->
-					<!-- <section data-background-image="img/policy-engine-screenshot.png" data-background-size="contain"></section> -->
-				</section>
-
-				<section>
-					<img src="img/gpt-store.png" class="stretch">
-				</section>
-
-				<section data-background-color="#0d2142">
-					<h1>Demo</h1>BBNJ Question-Answering Bot
-				</section>
+				
 
 				<section>
 					<section>
@@ -240,18 +256,26 @@
 				</section>
 
 				
+				<section data-background-color="#0d2142">
+					<h3>Discussion Break #1</h3>
+					<ol class="spaced">
+						<li>How have you been using ChatGPT in your work?</li>
+						<li>How do you think ChatGPT could change policymaking?</li>
+					</ol>
+				</section>
 
-				
+
 				<section>
 					<ol class="signpost-list">
-						<li class="signpost-chunk fragment custom" data-fragment-index="0">
+						<li class="signpost-chunk">
 							Introduction & Motivation
 							<ul>
+								<li>Future of ChatGPT in Policy?</li>
 								<li>How ChatGPT works</li>
-								<li>Future of ChatGPT in Policy</li>
 							</ul>
 						</li>
-						<li class="signpost-chunk fragment custom" data-fragment-index="1">
+						<li class="signpost-chunk active">Equity issues, biases, concerns</li>
+						<li class="signpost-chunk">
 							Practical stuff
 							<ul>
 								<!-- <li>How to access GPT</li> -->
@@ -259,12 +283,107 @@
 								<li>Prompting strategies</li>
 							</ul>
 						</li>
+					</ol>
+				</section>
+
+				<section data-background-color="#404040" data-background-image="img/algorithms-of-opression.jpg" data-background-size="contain">
+				</section>
+
+				<section>
+					<h3>Model Biases</h3>
+					<div class="stretch" style="font-size:60%; vertical-align:top">
+						<div class="exampleprompt fragment" style="width:47%; display:inline-block; vertical-align:top; margin-right:1em;">
+							<div class="prompt"><b>Q:</b> Does the USA violate human rights?</div>
+							<div class="response fragment"><b>ChatGPT:</b> <span class="hilight">The question of whether the United States violates human rights is complex and subjective.</span> The U.S. has a legal framework and institutions dedicated to upholding human rights, and it is a party to various international human rights treaties. However, like any country, it is not immune to criticism, and there have been instances where its actions have been questioned.<br><br>
+
+								Critics often point to issues such as racial disparities in the criminal justice system, mass incarceration, treatment of detainees at Guantanamo Bay, the use of lethal force by law enforcement, and concerns about privacy and surveillance. Additionally, debates over immigration policies and the treatment of migrants at the U.S. southern border have raised human rights concerns.<br><br>
+								
+								It's important to note that perspectives on human rights can vary, and opinions may differ on whether specific actions constitute violations. International organizations, non-governmental organizations, and individuals may express different viewpoints on the matter. Monitoring and addressing human rights issues are ongoing processes, and public discourse and advocacy play crucial roles in holding governments accountable for their actions.</div>
+						</div>
+
+						<div class="exampleprompt fragment" style="width:47%; display:inline-block; vertical-align:top">
+							<div class="prompt"><b>Q:</b> Does Thailand violate human rights?</div>
+							<div class="response fragment"><b>ChatGPT:</b> <span class="hilight">As of my last knowledge update in January 2022, Thailand has faced scrutiny and criticism regarding human rights issues.</span> Some concerns have been raised by international organizations and human rights advocates in areas such as freedom of expression, assembly, and association, as well as treatment of certain minority groups.<br><br>
+
+								Issues have included restrictions on freedom of speech, limitations on peaceful assembly, and allegations of extrajudicial killings in the context of the government's anti-drug campaign. Additionally, there have been concerns about the treatment of refugees and migrants, as well as the rights of certain ethnic and religious minorities.<br><br>
+								
+								It's important to note that the human rights situation can change, and new developments may have occurred since my last update. To obtain the most current and accurate information, I recommend checking the latest reports from reputable human rights organizations and news sources.</div>
+							<!-- <div class="response fragment"><b>A:</b><span class="hilight">As of my last knowledge update in January 2022, Ethiopia has been facing human rights concerns, particularly in the context of internal conflicts and security operations.</span> The situation in Ethiopia is complex and may have evolved since then. Here are some key issues that were known at that time:<br><br>
+
+								1. Tigray Conflict: One major concern was the conflict in the Tigray region, where the Ethiopian government, along with allied forces, engaged in a military operation against the Tigray People's Liberation Front (TPLF). Reports of human rights abuses, including mass killings, sexual violence, and displacement of civilians, were widespread. Both the government forces and TPLF were accused of committing atrocities.<br><br>
+							
+								2. Political Repression: Ethiopia has a history of political repression, and there were concerns about restrictions on freedom of expression, arbitrary detentions, and harassment of opposition figures. The government had been accused of using anti-terrorism laws to stifle dissent.<br><br>
+							
+								3. Internet Shutdowns: The government has been known to shut down internet access during periods of civil unrest, limiting communication and information flow.<br><br>
+							
+							It is crucial to note that the situation is fluid, and developments may have occurred since my last update. It's recommended to check the latest reports from reputable human rights organizations, news sources, and official statements to obtain the most current information on the human rights situation in Ethiopia. Keep in mind that perspectives on these issues can vary, and it's important to consider multiple sources to form a well-rounded understanding.</div> -->
+						</div>
+					</div>
+				</section>
+
+
+				<section>
+					<h3>Biases from Policy Writing</h3>
+					<!-- - Most of GPT training data is written by economically/politically powerful, mostly-Western sources
+					- polite UN language
+					- documents perpetuate colonialism
+					- issues and criticisms go undocumented -->
+					<div class="exampleprompt" style="width:80%;margin-left:auto;margin-right:auto;font-size:50%">
+						<div class="prompt"><b>Q:</b> From the perspective of developing countries, have access and benefit sharing been prioritized in the BBNJ treaty?</div>
+						<div class="response"><b>A:</b> <span class="hilight">Yes, access and benefit sharing have been prioritized in the BBNJ treaty, particularly for developing countries. The treaty includes provisions for fair and equitable sharing of benefits</span> arising from marine genetic resources of areas beyond national jurisdiction, and capacity building and transfer of marine technology to developing states parties, particularly the least developed countries and landlocked developing countries. The treaty also establishes a financial mechanism aimed at ensuring efficient access to funding through simplified approval procedures and enhanced readiness of support for developing states parties, taking into account their specific needs and special circumstances. The GEF has also set aside funding to support national ratification and implementation of the treaty, particularly for developing countries.</div>
+					</div>
+					<ul style="font-size:80%" class="fragment">
+						<li class="">Many issues facing developing countries are not documented.</li>
+						<li class="">Super-polite UN decorum favors entrenched powerful countries</li>
+					</ul>
+				</section>
+
+				<section data-background-color="#0d2142">
+					<h3>Concerns</h3>
+					<ol class="spaced">
+						<li class="fragment">Model biases</li>
+						<li class="fragment">Misplaced trust & overreliance on AI</li>
+						<!-- <li class="fragment">Hidden influence of opinionated models</li> -->
+						<li class="fragment">Displacing real capacity building</li>
+						<li class="fragment">Capacity gap among States</li>
+					</ol>
+				</section>
+
+				<section data-background-color="#0d2142">
+					<h3>Discussion Break #2</h3>
+					<ol class="spaced">
+						<li class="">Have you seen ChatGPT biases while using it?</li>
+						<li class="">What are your biggest concerns?</li>
+						<li class="">What should we do about this?</li>
+					</ol>
+				</section>
+
+
+
+				
+				<section>
+					<ol class="signpost-list">
+						<li class="signpost-chunk">
+							Introduction & Motivation
+							<ul>
+								<li>Future of ChatGPT in Policy?</li>
+								<li>How ChatGPT works</li>
+							</ul>
+						</li>
 						<li class="signpost-chunk">Equity issues, biases, concerns</li>
+						<li class="signpost-chunk active">
+							Practical stuff
+							<ul>
+								<li>Ways to access GPT</li>
+								<li>Strengths and weaknesses for policy</li>
+								<li>Prompting strategies</li>
+							</ul>
+						</li>
 					</ol>
 				</section>
 
 				<section>
-					<h2>How to access GPT?</h2>
+					<h2>Ways to access GPT</h2>
 					(and other AI language models)
 					<ul>
 						<li>ChatGPT and ChatGPT+</li>
@@ -341,7 +460,7 @@
 								</div>
 						</li>
 						<li class="fragment">Ask it to adopt a persona.
-							<div class="promptengineeringexample"><b>E.g.</b>You are a helpful policy analyst preparing a report for XYZ...</div>
+							<div class="promptengineeringexample"><b>E.g.</b>You are a helpful policy analyst preparing a policy brief for XYZ...</div>
 						</li>
 						<li class="fragment">
 							Give examples.
@@ -385,97 +504,16 @@
 
 				<section data-background-color="#0d2142">
 					<h3>Prompting Tips</h3>
-					<ul>
-						<li>Experiment: try different wordings</li>
-						<li>Search for similar examples</li>
-						<li>Read "prompt engineering" guides</li>
+					<ul class="spaced">
+						<li class="fragment">Experiment: try different wordings</li>
+						<li class="fragment">Clear the chat history between tries</li>
+						<li class="fragment">Search for example prompts</li>
+						<li class="fragment">Read "prompt engineering" guides</li>
 					</ul>
 				</section>
 
 
-				<section>
-					<ol class="signpost-list">
-						<li class="signpost-chunk">
-							Introduction & Motivation
-							<ul>
-								<li>How ChatGPT works</li>
-								<li>Future of ChatGPT in Policy</li>
-							</ul>
-						</li>
-						<li class="signpost-chunk fragment custom" data-fragment-index="0">
-							Practical stuff
-							<ul>
-								<!-- <li>How to access GPT</li> -->
-								<li>Strengths and weaknesses for policy</li>
-								<li>Prompting strategies</li>
-							</ul>
-						</li>
-						<li class="signpost-chunk fragment custom" data-fragment-index="1">Equity issues, biases, concerns</li>
-					</ol>
-				</section>
 
-				<section data-background-color="#404040" data-background-image="img/algorithms-of-opression.jpg" data-background-size="contain">
-				</section>
-
-				<section>
-					<h3>Model Biases</h3>
-					<div class="stretch" style="font-size:70%; vertical-align:top">
-						<div class="exampleprompt fragment" style="width:47%; display:inline-block; vertical-align:top; margin-right:1em;">
-							<div class="prompt"><b>Q:</b> Is England a human rights abuser?</div>
-							<div class="response fragment"><b>A:</b> <span class="hilight">The question of whether the United Kingdom is a human rights abuser is subjective and depends on various perspectives and criteria.</span> The UK is a signatory to international human rights treaties and has a legal framework in place to protect human rights. However, like any country, it may face criticism and allegations of human rights abuses.<br><br>
-
-							There have been instances where the UK government's actions or policies have been questioned in relation to human rights, such as concerns about surveillance practices, treatment of migrants, and issues related to counter-terrorism measures. Additionally, controversies surrounding the treatment of certain groups, like the Windrush generation, have sparked debates about human rights in the UK.<br><br>
-							
-							It's important to note that opinions on this matter may vary, and assessments may depend on individual viewpoints, political affiliations, and specific incidents under consideration. International human rights organizations, such as Amnesty International and Human Rights Watch, regularly assess and report on human rights situations in different countries, including the UK, providing additional perspectives on the matter.</div>
-						</div>
-
-						<div class="exampleprompt fragment" style="width:47%; display:inline-block; vertical-align:top">
-							<div class="prompt"><b>Q:</b> Is Ethiopia a human rights abuser?</div>
-							<div class="response fragment"><b>A:</b> As of my last knowledge update in January 2022, <span class="hilight">Ethiopia has faced allegations and concerns regarding human rights abuses, particularly in the context of conflicts and political unrest.</span> The situation can change over time, and it's important to check for the latest information to get an accurate and up-to-date assessment.<br><br>
-
-								Ethiopia has been involved in internal conflicts, including the Tigray conflict that began in November 2020. There have been reports of human rights violations, including displacement of civilians, sexual violence, and other atrocities. The Ethiopian government has been accused of committing human rights abuses, and various international organizations and governments have expressed concern and called for investigations.<br><br>
-								
-								To obtain the most recent and accurate information on Ethiopia's human rights situation, please refer to reliable news sources, human rights organizations, and official statements from relevant authorities as of 2024.</div>
-						</div>
-					</div>
-				</section>
-
-
-				<section>
-					<h3>Biases from Policy Writing</h3>
-					<!-- - Most of GPT training data is written by economically/politically powerful, mostly-Western sources
-					- polite UN language
-					- documents perpetuate colonialism
-					- issues and criticisms go undocumented -->
-					<div class="exampleprompt" style="width:80%;margin-left:auto;margin-right:auto;font-size:50%">
-						<div class="prompt"><b>Q:</b> From the perspective of developing countries, have access and benefit sharing been prioritized in the BBNJ treaty?</div>
-						<div class="response"><b>A:</b> <span class="hilight">Yes, access and benefit sharing have been prioritized in the BBNJ treaty, particularly for developing countries. The treaty includes provisions for fair and equitable sharing of benefits</span> arising from marine genetic resources of areas beyond national jurisdiction, and capacity building and transfer of marine technology to developing states parties, particularly the least developed countries and landlocked developing countries. The treaty also establishes a financial mechanism aimed at ensuring efficient access to funding through simplified approval procedures and enhanced readiness of support for developing states parties, taking into account their specific needs and special circumstances. The GEF has also set aside funding to support national ratification and implementation of the treaty, particularly for developing countries.</div>
-					</div>
-					<ul style="font-size:80%" class="fragment">
-						<li class="">Many issues facing developing countries are not documented.</li>
-						<li class="">Super-polite UN decorum favors entrenched powerful countries</li>
-					</ul>
-				</section>
-
-				<section data-background-color="#0d2142">
-					<h3>Concerns</h3>
-					<ol class="spaced">
-						<li class="fragment">Model biases</li>
-						<li class="fragment">Misplaced trust & overreliance on AI</li>
-						<li class="fragment">Hidden influence of opinionated models</li>
-						<li class="fragment">Displacing real capacity building</li>
-						<li class="fragment">Capacity gap among States</li>
-					</ol>
-				</section>
-
-				<section data-background-color="#0d2142">
-					<h3>So what do we do about this?</h3>
-					<ol>
-						<li class="fragment">AI literacy</li>
-						<li class="fragment">Push for marginalized groups to have more control of AI systems</li>
-						<li class="fragment">???</li>
-					</ol>
-				</section>
 
 				<section>
 					<h2>Takeaways</h2>
@@ -493,12 +531,14 @@
 				<section data-background-color="#0d2142">
 					<h1>Thanks!</h1>
 					<br><br>
-					<h3>Seeking collaborations!</h3>
-					<ul>
-						<li>What do you want to use AI for?</li>
-						<li>Want to build a custom GPT?</li>
-						<li>Want to talk about any ocean technology things?</li>
-					</ul>
+					<div class="fragment">
+						<h3>Seeking collaborations!</h3>
+						<ul>
+							<li>What do you want to use AI for?</li>
+							<li>Want to build a custom GPT?</li>
+							<li>Want to talk about any ocean technology things?</li>
+						</ul>
+					</div>
 				</section>
 			</div>
 		</div>
